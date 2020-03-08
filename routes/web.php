@@ -17,6 +17,35 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/changePassword', 'Auth\ChangePasswordController@index')->name('password.change');
 Route::post('/changePassword', 'Auth\ChangePasswordController@changepassword')->name('password.update');
+
+Route::group([ 'as'=>'cliente.', 'prefix'=>'cliente', 'namespace'=>'Cliente', 'middleware'=>['auth', 'cliente'] ],
+    function() {
+        Route::get('dashboard','DashboardController@index')->name('dashboard');
+    }
+);
+
+Route::group([ 'as'=>'taller.', 'prefix'=>'taller', 'namespace'=>'Taller', 'middleware'=>['auth', 'taller'] ],
+    function() {
+        Route::get('dashboard','DashboardController@index')->name('dashboard');
+    }
+);
+
+Route::group([ 'as'=>'concesionario.', 'prefix'=>'concesionario', 'namespace'=>'Concesionario', 'middleware'=>['auth', 'concesionario'] ],
+    function() {
+        Route::get('dashboard','DashboardController@index')->name('dashboard');
+    }
+);
+
+Route::group([ 'as'=>'compraventa.', 'prefix'=>'compraventa', 'namespace'=>'Compraventa', 'middleware'=>['auth', 'compraventa'] ],
+    function() {
+        Route::get('dashboard','DashboardController@index')->name('dashboard');
+    }
+);
+
+Route::group([ 'as'=>'recambios.', 'prefix'=>'recambios', 'namespace'=>'Recambios', 'middleware'=>['auth', 'recambios'] ],
+    function() {
+        Route::get('dashboard','DashboardController@index')->name('dashboard');
+    }
+);

@@ -12,6 +12,20 @@
                         @csrf
 
                         <div class="form-group row">
+                            <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+
+                                @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
@@ -61,19 +75,21 @@
                             </div>
                         </div>
 
-                        {{-- Añadido de tipo de cuenta del usuario --}}
+                        <!-- Añadido de tipo de cuenta del usuario -->
 
                         <div class="form-group row">
-                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Type Account') }}</label>
+                            <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Type Account') }}</label>
 
                             <div class="col-md-6">
-                                <select id="type" type="type" class="custom-select mr-sm-2 @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type">
+                                <select id="role_id" class="custom-select mr-sm-2 @error('role_id') is-invalid @enderror" name="role_id" value="{{ old('role_id') }}" required autocomplete="role_id">
                                     <option value="">Choose...</option>
-                                    <option value="cliente">Cliente</option>
-                                    <option value="taller">Taller</option>
-                                    <option value="concesionario">Concesionario</option>
+                                    <option value="1">Cliente</option>
+                                    <option value="2">Taller</option>
+                                    <option value="3">Concesionario</option>
+                                    <option value="4">Compraventa</option>
+                                    <option value="5">Recambios</option>
                                 </select>
-                                @error('type')
+                                @error('role_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -81,11 +97,11 @@
                             </div>
                         </div>
 
-                        {{-- El añadido del tipo de usuario termina aquí --}}
+                        <!-- El añadido del tipo de usuario termina aquí -->
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">
                                     {{ __('Register') }}
                                 </button>
                             </div>

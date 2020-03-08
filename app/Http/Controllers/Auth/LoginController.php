@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -26,7 +27,30 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/';
+
+    protected function redirectTo() {
+
+        if (Auth::check() && Auth::user()->role->id == 1) {
+            $this->redirectTo = route('cliente.dashboard');
+        }
+        elseif (Auth::check() && Auth::user()->role->id == 2) {
+            $this->redirectTo = route('taller.dashboard');
+        }
+        elseif (Auth::check() && Auth::user()->role->id == 3) {
+            $this->redirectTo = route('concesionario.dashboard');
+        }
+        elseif (Auth::check() && Auth::user()->role->id == 4) {
+            $this->redirectTo = route('compraventa.dashboard');
+        }
+        elseif (Auth::check() && Auth::user()->role->id == 5) {
+            $this->redirectTo = route('recambios.dashboard');
+        }
+        
+        $this->middleware('guest')->except('logout');
+
+        return $this->redirectTo;
+    }
 
     /**
      * Create a new controller instance.
@@ -35,6 +59,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        
     }
 }

@@ -68,7 +68,21 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        @if (Auth::check() && Auth::user()->role->id == 1)
+                            <a href="{{ route('cliente.dashboard') }}">Home</a>
+                        @endif
+                        @if (Auth::check() && Auth::user()->role->id == 2)
+                            <a href="{{ route('taller.dashboard') }}">Home</a>
+                        @endif
+                        @if (Auth::check() && Auth::user()->role->id == 3)
+                            <a href="{{ route('concesionario.dashboard') }}">Home</a>
+                        @endif
+                        @if (Auth::check() && Auth::user()->role->id == 4)
+                            <a href="{{ route('compraventa.dashboard') }}">Home</a>
+                        @endif
+                        @if (Auth::check() && Auth::user()->role->id == 5)
+                            <a href="{{ route('recambios.dashboard') }}">Home</a>
+                        @endif
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
