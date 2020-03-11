@@ -6,29 +6,8 @@
 
         <title>tuTaller</title>
 
-        <!-- mdbootstrap -->
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-        <!-- Bootstrap core CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
-        <!-- JQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
-
-
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -36,6 +15,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
         <style>
 
             .position-ref {
@@ -58,14 +38,16 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 5em;
             }
-
             
             .title > a {
                 color: #636b6f;
                 font-family: 'Amaranth', sans-serif;
                 text-decoration: none;
+            }
+            .title > a:hover {
+                color: purple;
             }
 
             .links {
@@ -85,13 +67,62 @@
                 border-bottom: solid 2px purple;
             }
 
+            .carousel-caption {
+                color: purple;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+            .carousel-caption h3 {
+                color: purple;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+
+            .marketing {
+                margin-top: 20px;
+            }
+
+            .marketing .btn-secondary {
+                background-color: purple;
+                border: none;
+            }
+
             .footer {
                 background-color: purple;
+                color: #fff;
+            }
+
+            .footer > a {
+                font-size: 2em;
+                color: #fff;
+                font-family: 'Amaranth', sans-serif;
+                text-decoration: none;
+            }
+
+            .feedback input {
+                border: solid 1px purple;
+            }
+
+            .btn-sm {
+                border: solid 1px purple;
+            }
+
+            .rrss > a:hover {
+                color: purple;
             }
 
         </style>
+        
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     </head>
     <body>
+
+        <!-- aquí empieza el menu superior -->
+
         <nav class="navbar navbar-expand-md navbar-light bg-white">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -113,37 +144,32 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item btn-group dropdown">
-                                @if (Auth::check() && Auth::user()->role->id == 1)
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('cliente.dashboard') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->username }} <span class="caret"></span>
-                                    </a>
-                                @endif
-                                @if (Auth::check() && Auth::user()->role->id == 2)
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('taller.dashboard') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->username }} <span class="caret"></span>
-                                    </a>
-                                @endif
-                                @if (Auth::check() && Auth::user()->role->id == 3)
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('concesionario.dashboard') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->username }} <span class="caret"></span>
-                                    </a>
-                                @endif
-                                @if (Auth::check() && Auth::user()->role->id == 4)
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('compraventa.dashboard') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->username }} <span class="caret"></span>
-                                    </a>
-                                @endif
-                                @if (Auth::check() && Auth::user()->role->id == 5)
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('recambios.dashboard') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->username }} <span class="caret"></span>
-                                    </a>
-                                @endif
+                            <li class="nav-item dropdown">
+
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->username }} <span class="caret"></span>
+                                </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
+                                    @if (Auth::check() && Auth::user()->role->id == 1)
+                                        <a class="dropdown-item" href="{{ route('cliente.dashboard') }}">{{ __('Perfil') }}</a>
+                                    @endif
+                                    @if (Auth::check() && Auth::user()->role->id == 2)
+                                        <a class="dropdown-item" href="{{ route('taller.dashboard') }}">{{ __('Perfil') }}</a>
+                                    @endif
+                                    @if (Auth::check() && Auth::user()->role->id == 3)
+                                        <a class="dropdown-item" href="{{ route('concesionario.dashboard') }}">{{ __('Perfil') }}</a>
+                                    @endif
+                                    @if (Auth::check() && Auth::user()->role->id == 4)
+                                        <a class="dropdown-item" href="{{ route('compraventa.dashboard') }}">{{ __('Perfil') }}</a>
+                                    @endif
+                                    @if (Auth::check() && Auth::user()->role->id == 5)
+                                        <a class="dropdown-item" href="{{ route('cliente.dashboard') }}">{{ __('Perfil') }}</a>
+                                    @endif
+
                                     <!-- Botón para cambiar la contraseña, en el menú desplegable cuando se está registrado. -->
-                                    <a class="dropdown-item" href="{{ route('password.change') }}">{{ __('Password') }}</a>
+                                    <a class="dropdown-item" href="{{ route('password.change') }}">{{ __('Change Password') }}</a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -161,7 +187,10 @@
                 </div>
             </div>
         </nav>
-        <div class="position-ref full-height">
+
+        <!-- Aqui empieza el contenido principal de la página -->
+
+        <div class="position-ref">
             
             <div class="content">
                 <div class="title">
@@ -191,37 +220,37 @@
                     <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
                         <div class="view">
-                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                        <img class="d-block w-100" src="public/storage/taller1.jpg"
                             alt="First slide">
                         <div class="mask rgba-black-light"></div>
                         </div>
                         <div class="carousel-caption">
-                        <h3 class="h3-responsive">Light mask</h3>
-                        <p>First text</p>
+                        <h3 class="h3-responsive">Profesionalidad</h3>
+                        <p>Lo más importante para nosotros es la profesionalidad.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <!--Mask color-->
                         <div class="view">
-                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                        <img class="d-block w-100" src="public/storage/taller2.jpg"
                             alt="Second slide">
                         <div class="mask rgba-black-strong"></div>
                         </div>
                         <div class="carousel-caption">
-                        <h3 class="h3-responsive">Strong mask</h3>
-                        <p>Secondary text</p>
+                        <h3 class="h3-responsive">Trato cordial</h3>
+                        <p>Es importante un trato profesional y al mismo cordial.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <!--Mask color-->
                         <div class="view">
-                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                        <img class="d-block w-100" src="public/storage/taller3.jpg"
                             alt="Third slide">
                         <div class="mask rgba-black-slight"></div>
                         </div>
                         <div class="carousel-caption">
-                        <h3 class="h3-responsive">Slight mask</h3>
-                        <p>Third text</p>
+                        <h3 class="h3-responsive">Presupuestos ajustados</h3>
+                        <p>Siempre buscamos la mejor calidad a los precios más competitivos.</p>
                         </div>
                     </div>
                     </div>
@@ -238,6 +267,75 @@
                     <!--/.Controls-->
                 </div>
                 <!--/.Carousel Wrapper-->
+
+                <div class="marketing">
+
+                    <!-- Three columns of text below the carousel -->
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <img class="rounded-circle" src="public/storage/perfil1.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <h2>Juan Hernández</h2>
+                        <p>"Ha sido una muy buena experiencia, sin duda repetiré."</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">Empresa »</a></p>
+                      </div><!-- /.col-lg-4 -->
+                      <div class="col-lg-4">
+                        <img class="rounded-circle" src="public/storage/perfil2.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <h2>Laura Gómez</h2>
+                        <p>"Me han aconsejado fenomenal, un trato cordial y cercano."</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">Empresa »</a></p>
+                      </div><!-- /.col-lg-4 -->
+                      <div class="col-lg-4">
+                        <img class="rounded-circle" src="public/storage/perfil3.jpg" alt="Generic placeholder image" width="140" height="140">
+                        <h2>Andrea Fernández</h2>
+                        <p>"No me he molestado en nada, me han recogido el coche en la puerta de mi trabajo."</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">Empresa »</a></p>
+                      </div><!-- /.col-lg-4 -->
+                    </div><!-- /.row -->
+            
+            
+                    <!-- START THE FEATURETTES -->
+            
+                    <hr class="featurette-divider">
+            
+                    <div class="row featurette">
+                      <div class="col-md-7">
+                        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                      </div>
+                      <div class="col-md-5">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_170c91df150%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_170c91df150%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.13333129882812%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                      </div>
+                    </div>
+            
+                    <hr class="featurette-divider">
+            
+                    <div class="row featurette">
+                      <div class="col-md-7 order-md-2">
+                        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                      </div>
+                      <div class="col-md-5 order-md-1">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_170c91df152%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_170c91df152%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.13333129882812%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                      </div>
+                    </div>
+            
+                    <hr class="featurette-divider">
+            
+                    <div class="row featurette">
+                      <div class="col-md-7">
+                        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                      </div>
+                      <div class="col-md-5">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_170c91df154%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_170c91df154%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.13333129882812%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                      </div>
+                    </div>
+            
+                    <hr class="featurette-divider">
+            
+                    <!-- /END THE FEATURETTES -->
+            
+                </div>
             </div>
         </div>
 
@@ -249,7 +347,7 @@
             <div class="container">
 
                 <!--Grid row-->
-                <div class="row">
+                <div class="feedback row ml-5">
 
                     <!--Grid column-->
                     <div class="col-md-6 mb-4">
@@ -272,7 +370,7 @@
                         <input type="text" class="form-control form-control-sm" placeholder="Your email"
                         aria-label="Your email" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                        <button class="btn btn-sm btn-outline-purple my-0" type="button">Sign up</button>
+                        <button class="btn btn-sm" type="button">Sign up</button>
                         </div>
                     </form>
             
@@ -287,32 +385,20 @@
             
                     
                     <!-- Grid column -->
-                    <div class="col-md-12 py-5">
-                        <div class="mb-5 flex-center">
+                    <div class="col-md-12 py-5 text-center">
+                        <div class="text-center rrss">
 
                         <!-- Facebook -->
                         <a class="fb-ic">
-                            <i class="fab fa-facebook-f fa-lg purple-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <!-- Twitter -->
-                        <a class="tw-ic">
-                            <i class="fab fa-twitter fa-lg purple-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <!-- Google +-->
-                        <a class="gplus-ic">
-                            <i class="fab fa-google-plus-g fa-lg purple-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <!--Linkedin -->
-                        <a class="li-ic">
-                            <i class="fab fa-linkedin-in fa-lg purple-text mr-md-5 mr-3 fa-2x"> </i>
+                            <i class="fab fa-facebook-f fa-lg purple-text ml-3 md-5 mr-3 fa-2x"> </i>
                         </a>
                         <!--Instagram-->
                         <a class="ins-ic">
-                            <i class="fab fa-instagram fa-lg purple-text mr-md-5 mr-3 fa-2x"> </i>
+                            <i class="fab fa-instagram fa-lg purple-text ml-2 md-5 mr-4 fa-2x"> </i>
                         </a>
-                        <!--Pinterest-->
-                        <a class="pin-ic">
-                            <i class="fab fa-pinterest fa-lg purple-text fa-2x"> </i>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg purple-text md-5 mr-3 fa-2x"> </i>
                         </a>
                         </div>
                     </div>
@@ -325,8 +411,8 @@
             <!-- Footer Elements -->
         
             <!-- Copyright -->
-            <div class="footer text-center py-3">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+            <div class="footer text-center py-3">
+            <a href="{{ url('/') }}"> tuTaller</a><br>© 2020 Copyright
             </div>
             <!-- Copyright -->
         
