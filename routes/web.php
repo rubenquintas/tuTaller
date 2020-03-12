@@ -23,12 +23,20 @@ Route::post('/changePassword', 'Auth\ChangePasswordController@changepassword')->
 Route::group([ 'as'=>'cliente.', 'prefix'=>'cliente', 'namespace'=>'Cliente', 'middleware'=>['auth', 'cliente'] ],
     function() {
         Route::get('dashboard','DashboardController@index')->name('dashboard');
+        Route::get('create', 'DashboardController@create')->name('create');
+        Route::post('create', 'DashboardController@store')->name('store');
+        Route::get('edit/{id}', 'DashboardController@edit')->name('edit');
+        Route::post('update/{id}', 'DashboardController@update')->name('update');
     }
 );
 
 Route::group([ 'as'=>'taller.', 'prefix'=>'taller', 'namespace'=>'Taller', 'middleware'=>['auth', 'taller'] ],
     function() {
         Route::get('dashboard','DashboardController@index')->name('dashboard');
+        Route::get('create', 'DashboardController@create')->name('create');
+        Route::post('create', 'DashboardController@store')->name('store');
+        Route::get('edit/{id}', 'DashboardController@edit')->name('edit');
+        Route::post('update/{id}', 'DashboardController@update')->name('update');
     }
 );
 
