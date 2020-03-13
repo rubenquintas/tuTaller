@@ -93,3 +93,9 @@
 .feedback  label {
     color: white;
 }
+
+.btn-sm {
+    background-color: purple;
+    border: solid 1px purple;
+    color: white;
+}

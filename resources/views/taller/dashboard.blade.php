@@ -34,7 +34,7 @@
                                 <ol>Provincia: {{ $taller->provincia}}</ol>
                                 <ol>País: {{ $taller->pais}}</ol>
                                 <ol>Teléfono: {{ $taller->telefono}}</ol>
-                                <ol><a class="btn btn-secondary" href="{{ route('taller.edit', $taller->id) }}" role="button">Modificar</a></ol>
+                                <ol><a class="btn btn-sm" href="{{ route('taller.edit', $taller->id) }}" role="button">Modificar</a></ol>
                             </ul>
                         {{-- @endif --}}
                         

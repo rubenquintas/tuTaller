@@ -51,7 +51,7 @@
         <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="Número de teléfono" aria-describedby="defaultRegisterFormPhoneHelpBlock" value="{{ $taller->telefono }}">
 
         <!-- Sign up button -->
-        <button id="addDatos" class="btn btn-info my-4 btn-block" type="submit">Modificar</button>
+        <button id="addDatos" class="btn btn-sm my-4 btn-block" type="submit">Modificar</button>
 
 
     </form>

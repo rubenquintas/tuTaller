@@ -15,7 +15,6 @@ class CreateTallersTable extends Migration
     {
         Schema::create('tallers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id');
             $table->string('nombre_fiscal')->unique();
             $table->integer('cif')->unique();
             $table->string('direccion');
