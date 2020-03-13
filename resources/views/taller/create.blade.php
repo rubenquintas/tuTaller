@@ -52,7 +52,7 @@
         <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="Número de teléfono" aria-describedby="defaultRegisterFormPhoneHelpBlock" value="{{ old('telefono') }}">
 
         <!-- Sign up button -->
-        <button id="addDatos" class="btn btn-info my-4 btn-block" type="submit">Añadir</button>
+        <button id="addDatos" class="btn btn-sm my-4 btn-block" type="submit">Añadir</button>
 
 
     </form>

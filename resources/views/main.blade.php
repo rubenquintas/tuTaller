@@ -106,7 +106,9 @@
                 <p class="lead">La economía mundial tiembla: la sucesión de diversos eventos han hecho que la actividad comercial internacional se ralentice de forma sustancial. Todo va más lento, todo parece haberse frenado.</p>
               </div>
               <div class="col-md-5">
+                <a href="https://www.diariomotor.com/noticia/coches-stock-oferta-consecuencia-coronavirus/">
                 <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; max-height: 500px;" src="https://www.diariomotor.com/imagenes/picscache/1440x655c/gasolinera-diesel-2_1440x655c.jpg" data-holder-rendered="true">
+                </a>
               </div>
             </div>
     
@@ -118,7 +120,7 @@
                 <p class="lead">La crisis del Coroavirus avanza poco a poco en nuestro país, y aún así parece que lo peor está por llegar. El sector del automóvil no es ajeno a esta crisis, y prueba de ello es el desplome que se augura en la venta de coches.</p>
               </div>
               <div class="col-md-5 order-md-1">
-                <a  href="https://www.diariomotor.com/noticia/coches-stock-oferta-consecuencia-coronavirus/">
+                <a href="https://www.diariomotor.com/noticia/coches-stock-oferta-consecuencia-coronavirus/">
                     <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; max-height: 500px;" src="https://www.diariomotor.com/imagenes/picscache/1440x655c/compra-coche-usado-concesionario-1219-05.jpeg_1440x655c.jpg" data-holder-rendered="true">
                 </a>
               </div>
@@ -132,7 +134,9 @@
                 <p class="lead">La Comisión de Rallyes, con Yves Matton a la cabeza, ha publicado hace solo unos minutos los principales detalles acerca del nuevo reglamento técnico para los World Rally Cars de 2022, los cuales pasaran a denominarse como Rally1 con el objetivo de que se conviertan en la cima de esa pirámide diseñada por la FIA para el futuro de la disciplina.</p>
               </div>
               <div class="col-md-5">
+                <a href="https://www.diariomotor.com/noticia/coches-stock-oferta-consecuencia-coronavirus/">
                 <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; max-height: 500px;" src="https://www.diariomotor.com/competicion/imagenes/picscache/1440x655c/2020montecarlo_aus_0002_1440x655c.jpg" data-holder-rendered="true">
+                </a>
               </div>
             </div>
     
