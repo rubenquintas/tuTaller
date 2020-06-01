@@ -41,7 +41,7 @@
                 </div>
                 <div class="carousel-caption">
                 <h3 class="h3-responsive">Trato cordial</h3>
-                <p>Es importante un trato profesional y al mismo cordial.</p>
+                <p>Es importante un trato profesional y al mismo tiempo cordial.</p>
                 </div>
             </div>
             <div class="carousel-item">
