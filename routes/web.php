@@ -27,6 +27,17 @@ Route::group([ 'as'=>'cliente.', 'prefix'=>'cliente', 'namespace'=>'Cliente', 'm
         Route::post('create', 'DashboardController@store')->name('store');
         Route::get('edit/{id}', 'DashboardController@edit')->name('edit');
         Route::post('update/{id}', 'DashboardController@update')->name('update');
+        Route::delete('delete/{id}', 'DashboardController@delete')->name('delete');
+        Route::get('createCoche', 'DashboardController@createCoche')->name('createCoche');
+        Route::post('createCoche', 'DashboardController@storeCoche')->name('storeCoche');
+        Route::get('editCoche/{id}', 'DashboardController@editCoche')->name('editCoche');
+        Route::post('updateCoche/{id}', 'DashboardController@updateCoche')->name('updateCoche');
+        Route::delete('deleteCoche/{id}', 'DashboardController@deleteCoche')->name('deleteCoche');
+        Route::get('createCita', 'DashboardController@createCita')->name('createCita');
+        Route::post('createCita', 'DashboardController@storeCita')->name('storeCita');
+        Route::get('editCita/{id}', 'DashboardController@editCita')->name('editCita');
+        Route::post('updateCita/{id}', 'DashboardController@updateCita')->name('updateCita');
+        Route::delete('deleteCita/{id}', 'DashboardController@deleteCita')->name('deleteCita');
     }
 );
 
@@ -37,23 +48,11 @@ Route::group([ 'as'=>'taller.', 'prefix'=>'taller', 'namespace'=>'Taller', 'midd
         Route::post('create', 'DashboardController@store')->name('store');
         Route::get('edit/{id}', 'DashboardController@edit')->name('edit');
         Route::post('update/{id}', 'DashboardController@update')->name('update');
-    }
-);
-
-Route::group([ 'as'=>'concesionario.', 'prefix'=>'concesionario', 'namespace'=>'Concesionario', 'middleware'=>['auth', 'concesionario'] ],
-    function() {
-        Route::get('dashboard','DashboardController@index')->name('dashboard');
-    }
-);
-
-Route::group([ 'as'=>'compraventa.', 'prefix'=>'compraventa', 'namespace'=>'Compraventa', 'middleware'=>['auth', 'compraventa'] ],
-    function() {
-        Route::get('dashboard','DashboardController@index')->name('dashboard');
-    }
-);
-
-Route::group([ 'as'=>'recambios.', 'prefix'=>'recambios', 'namespace'=>'Recambios', 'middleware'=>['auth', 'recambios'] ],
-    function() {
-        Route::get('dashboard','DashboardController@index')->name('dashboard');
+        Route::delete('delete/{id}', 'DashboardController@delete')->name('delete');
+        Route::get('createEmpleado', 'DashboardController@createEmpleado')->name('createEmpleado');
+        Route::post('createEmpleado', 'DashboardController@storeEmpleado')->name('storeEmpleado');
+        Route::get('editEmpleado/{id}', 'DashboardController@editEmpleado')->name('editEmpleado');
+        Route::post('updateEmpleado/{id}', 'DashboardController@updateEmpleado')->name('updateEmpleado');
+        Route::delete('deleteEmpleado/{id}', 'DashboardController@deleteEmpleado')->name('deleteEmpleado');
     }
 );

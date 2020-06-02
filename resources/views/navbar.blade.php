@@ -21,8 +21,15 @@
                 @else
                     <li class="nav-item dropdown">
 
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->username }} <span class="caret"></span>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="
+                        @if (Auth::check() && Auth::user()->role->id == 1)
+                            {{ route('cliente.dashboard') }}
+                        @endif
+                        @if (Auth::check() && Auth::user()->role->id == 2)
+                            {{ route('taller.dashboard') }}
+                        @endif
+                        " role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ ucfirst(Auth::user()->username) }} <span class="caret"></span>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -32,15 +39,6 @@
                             @endif
                             @if (Auth::check() && Auth::user()->role->id == 2)
                                 <a class="dropdown-item" href="{{ route('taller.dashboard') }}">{{ __('Perfil') }}</a>
-                            @endif
-                            @if (Auth::check() && Auth::user()->role->id == 3)
-                                <a class="dropdown-item" href="{{ route('concesionario.dashboard') }}">{{ __('Perfil') }}</a>
-                            @endif
-                            @if (Auth::check() && Auth::user()->role->id == 4)
-                                <a class="dropdown-item" href="{{ route('compraventa.dashboard') }}">{{ __('Perfil') }}</a>
-                            @endif
-                            @if (Auth::check() && Auth::user()->role->id == 5)
-                                <a class="dropdown-item" href="{{ route('cliente.dashboard') }}">{{ __('Perfil') }}</a>
                             @endif
 
                             <!-- Botón para cambiar la contraseña, en el menú desplegable cuando se está registrado. -->

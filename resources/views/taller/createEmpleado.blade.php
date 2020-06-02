@@ -2,28 +2,37 @@
 
 @section('content')
 
-    @if ($errors->any())
-        @foreach ($errors->all() as $error)
-            <div class="alert alert-danger" role="alert">
-                {{ $error }}
-            </div>
-        @endforeach
-        
+@if ($errors->any())
+@foreach ($errors->all() as $error)
+    @if ($error == 'The taller id field is required.')
+    <div class="alert alert-danger" role="alert">
+        "Introduce primero tus datos fiscales."
+    </div>
+    @else
+    <div class="alert alert-danger" role="alert">
+        {{ $error }}
+    </div>
     @endif
+@endforeach
+
+@endif
 
     <!-- Default form register -->
-    <form class="text-center border border-light p-5" action="{{ route('taller.store') }}" method="POST">
+    <form class="text-center border border-light p-5" action="{{ route('taller.storeEmpleado') }}" method="POST">
 
         {{ csrf_field() }}
 
-        <p class="h4 mb-4">Datos personales</p>
+        <p class="h4 mb-4">Empleado</p>
 
         <div class="form-row mb-4">
             <div class="col">
-                <input type="text" name="nombre_fiscal" id="nombre_fiscal" class="form-control" placeholder="Nombre fiscal" value="{{ old('nombre_fiscal') }}">
+                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" value="{{ old('nombre') }}">
             </div>
             <div class="col">
-                <input type="text" name="cif" id="cif" class="form-control" placeholder="CIF" value="{{ old('cif') }}">
+                <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Apellidos" value="{{ old('apellidos') }}">
+            </div>
+            <div class="col">
+                <input type="text" name="dni" id="dni" class="form-control" placeholder="DNI" value="{{ old('dni') }}">
             </div>
         </div>
         <div class="form-row mb-4">
@@ -46,7 +55,7 @@
             </div>
             <div class="col">
                 <input type="text" name="pais" id="pais" class="form-control" placeholder="País" value="{{ old('pais') }}">
-                <input type="hidden" name="user_id" id="user_id" class="form-control" value="{{ Auth::user()->id }}">
+                <input type="hidden" name="taller_id" id="taller_id" class="form-control" value="{{ Auth::user()->id }}">
             </div>
         </div>
 

@@ -99,3 +99,11 @@
     border: solid 1px purple;
     color: white;
 }
+
+.navbar-brand {
+    font-family: 'Amaranth', sans-serif;
+}
+
+.card-header a {
+    float: right;
+}

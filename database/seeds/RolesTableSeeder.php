@@ -21,20 +21,5 @@ class RolesTableSeeder extends Seeder
             'name' => 'Taller',
             'slug'=> 'taller',
         ]);
-        
-        DB::table('roles')->insert([
-            'name' => 'Concesionario',
-            'slug'=> 'concesionario',
-        ]);
-
-        DB::table('roles')->insert([
-            'name' => 'Compraventa',
-            'slug'=> 'compraventa',
-        ]);
-        
-        DB::table('roles')->insert([
-            'name' => 'Recambios',
-            'slug'=> 'recambios',
-        ]);
     }
 }

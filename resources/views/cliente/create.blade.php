@@ -12,7 +12,7 @@
     @endif
 
     <!-- Default form register -->
-    <form class="text-center border border-light p-5" action="{{ route('taller.store') }}" method="POST">
+    <form class="text-center border border-light p-5" action="{{ route('cliente.store') }}" method="POST">
 
         {{ csrf_field() }}
 
@@ -20,10 +20,13 @@
 
         <div class="form-row mb-4">
             <div class="col">
-                <input type="text" name="nombre_fiscal" id="nombre_fiscal" class="form-control" placeholder="Nombre fiscal" value="{{ old('nombre_fiscal') }}">
+                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" value="{{ old('nombre') }}">
             </div>
             <div class="col">
-                <input type="text" name="cif" id="cif" class="form-control" placeholder="CIF" value="{{ old('cif') }}">
+                <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Apellidos" value="{{ old('apellidos') }}">
+            </div>
+            <div class="col">
+                <input type="text" name="dni" id="dni" class="form-control" placeholder="DNI" value="{{ old('dni') }}">
             </div>
         </div>
         <div class="form-row mb-4">

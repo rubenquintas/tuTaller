@@ -45,6 +45,7 @@
             </div>
             <div class="col">
                 <input type="text" name="pais" id="pais" class="form-control" placeholder="País" value="{{ $taller->pais }}">
+                <input type="hidden" name="user_id" id="user_id" class="form-control" value="{{ $taller->user_id }}">
             </div>
         </div>
 

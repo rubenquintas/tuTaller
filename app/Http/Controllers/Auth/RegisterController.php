@@ -40,15 +40,6 @@ class RegisterController extends Controller
         elseif (Auth::check() && Auth::user()->role->id == 2) {
             $this->redirectTo = route('taller.dashboard');
         }
-        elseif (Auth::check() && Auth::user()->role->id == 3) {
-            $this->redirectTo = route('concesionario.dashboard');
-        }
-        elseif (Auth::check() && Auth::user()->role->id == 4) {
-            $this->redirectTo = route('compraventa.dashboard');
-        }
-        elseif (Auth::check() && Auth::user()->role->id == 5) {
-            $this->redirectTo = route('recambios.dashboard');
-        }
 
         $this->middleware('guest');
 

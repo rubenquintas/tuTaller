@@ -16,14 +16,15 @@ class CreateTallersTable extends Migration
         Schema::create('tallers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre_fiscal')->unique();
-            $table->integer('cif')->unique();
-            $table->string('direccion');
-            $table->integer('numero');
-            $table->integer('codigopostal');
-            $table->string('localidad');
-            $table->string('provincia');
-            $table->string('pais');
+            $table->string('cif')->unique();
+            $table->string('direccion')->nullable();
+            $table->integer('numero')->nullable();
+            $table->integer('codigopostal')->nullable();
+            $table->string('localidad')->nullable();
+            $table->string('provincia')->nullable();
+            $table->string('pais')->nullable();
             $table->integer('telefono');
+            $table->BigInteger('user_id');
             $table->timestamps();
         });
     }

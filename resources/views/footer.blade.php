@@ -14,7 +14,6 @@
             <form class="form-inline">
                 <label for="buscar">buscar</label>
                 <input class="form-control form-control-sm mr-3 w-75" id="buscar" type="text" placeholder="Buscar" aria-label="Buscar">
-                <i class="fas fa-search" aria-hidden="true"></i>
             </form>
             <!-- Form -->
     
@@ -47,15 +46,15 @@
                 <div class="text-center rrss">
 
                 <!-- Facebook -->
-                <a class="fb-ic" href="https://www.facebook.com/TuTaller-104013214560696/">
+                <a class="fb-ic" href="{{ asset('https://www.facebook.com/TuTaller-104013214560696/') }}">
                     <i class="fab fa-facebook-f fa-lg purple-text ml-3 md-5 mr-3 fa-2x"></i>
                 </a>
                 <!--Instagram-->
-                <a class="ins-ic" href="https://www.instagram.com/_tutaller/">
+                <a class="ins-ic" href="{{ asset('https://www.instagram.com/_tutaller/') }}">
                     <i class="fab fa-instagram fa-lg purple-text ml-2 md-5 mr-4 fa-2x"></i>
                 </a>
                 <!-- Twitter -->
-                <a class="tw-ic" href="https://twitter.com/_tuTaller">
+                <a class="tw-ic" href="{{ asset('https://twitter.com/_tuTaller') }}">
                     <i class="fab fa-twitter fa-lg purple-text md-5 mr-3 fa-2x"></i>
                 </a>
                 </div>

@@ -24,15 +24,6 @@ class RedirectIfAuthenticated
         elseif (Auth::guard($guard)->check() && Auth::user()->role->id == 2) {
             return redirect()->route('taller.dashboard');
         }
-        elseif (Auth::guard($guard)->check() && Auth::user()->role->id == 3) {
-            return redirect()->route('concesionario.dashboard');
-        }
-        elseif (Auth::guard($guard)->check() && Auth::user()->role->id == 4) {
-            return redirect()->route('compraventa.dashboard');
-        }
-        elseif (Auth::guard($guard)->check() && Auth::user()->role->id == 5) {
-            return redirect()->route('recambios.dashboard');
-        }
         else {
             return $next($request);
         }

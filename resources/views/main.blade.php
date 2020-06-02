@@ -12,18 +12,11 @@
         </div>
         <!--Carousel Wrapper-->
         <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
-            <!--/.Indicators-->
             <!--Slides-->
             <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
                 <div class="view">
-                <img class="d-block w-100" src="public/storage/taller1.jpg"
+                <img class="d-block w-100" src="{{ asset('storage/taller1.jpg') }}"
                     alt="Primera foto del carrusel">
                 <div class="mask rgba-black-light"></div>
                 </div>
@@ -35,7 +28,7 @@
             <div class="carousel-item">
                 <!--Mask color-->
                 <div class="view">
-                <img class="d-block w-100" src="public/storage/taller2.jpg"
+                <img class="d-block w-100" src="{{ asset('storage/taller2.jpg') }}"
                     alt="Segunda foto del carrusel">
                 <div class="mask rgba-black-strong"></div>
                 </div>
@@ -47,7 +40,7 @@
             <div class="carousel-item">
                 <!--Mask color-->
                 <div class="view">
-                <img class="d-block w-100" src="public/storage/taller3.jpg"
+                <img class="d-block w-100" src="{{ asset('storage/taller3.jpg') }}"
                     alt="Tercera foto del carrusel">
                 <div class="mask rgba-black-slight"></div>
                 </div>
@@ -76,19 +69,19 @@
             <!-- Three columns of text below the carousel -->
             <div class="row">
               <div class="col-lg-4">
-                <img class="rounded-circle" src="public/storage/perfil1.jpg" alt="Foto perfil" width="140" height="140">
+                <img class="rounded-circle" src="{{ asset('storage/perfil1.jpg') }}" alt="Foto perfil" width="140" height="140">
                 <h2>Juan Hernández</h2>
                 <p>"Ha sido una muy buena experiencia, sin duda repetiré."</p>
                 <p><a class="btn btn-secondary" href="#" role="button">Empresa »</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-4">
-                <img class="rounded-circle" src="public/storage/perfil2.jpg" alt="Foto perfil" width="140" height="140">
+                <img class="rounded-circle" src="{{ asset('storage/perfil2.jpg') }}" alt="Foto perfil" width="140" height="140">
                 <h2>Laura Gómez</h2>
                 <p>"Me han aconsejado fenomenal, un trato cordial y cercano."</p>
                 <p><a class="btn btn-secondary" href="#" role="button">Empresa »</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-4">
-                <img class="rounded-circle" src="public/storage/perfil3.jpg" alt="Foto perfil" width="140" height="140">
+                <img class="rounded-circle" src="{{ asset('storage/perfil3.jpg') }}" alt="Foto perfil" width="140" height="140">
                 <h2>Andrea Fernández</h2>
                 <p>"No me he molestado en nada, me han recogido el coche en la puerta de mi trabajo."</p>
                 <p><a class="btn btn-secondary" href="#" role="button">Empresa »</a></p>

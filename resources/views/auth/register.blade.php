@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nickname') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -85,9 +85,6 @@
                                     <option value="">Elige...</option>
                                     <option value="1">Cliente</option>
                                     <option value="2">Taller</option>
-                                    <option value="3">Concesionario</option>
-                                    <option value="4">Compraventa</option>
-                                    <option value="5">Recambios</option>
                                 </select>
                                 @error('role_id')
                                     <span class="invalid-feedback" role="alert">
@@ -111,20 +108,20 @@
                                         <div class="modal-dialog" role="document">
                                           <div class="modal-content">
                                             <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                              <h5 class="modal-title" id="exampleModalLongTitle">LOPD</h5>
                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                               </button>
                                             </div>
                                             <div class="modal-body">
-                                                LA (VUESTRA EMPRESA) está especialmente sensibilizada en la protección de los datos de los USUARIOS de los servicios a los que se accede a través de su web. Mediante la presente Política de Privacidad (en adelante , la Política) LA (VUESTRA EMPRESA) informa a los USUARIOS del sitio web: (VUESTROS DATOS)del tratamiento y usos a los que se someten los datos de carácter personal que se recaban en la web, con el fin de que decidan, libre y voluntariamente, si desean facilitar la información solicitada.
+                                                tuTaller está especialmente sensibilizada en la protección de los datos de los USUARIOS de los servicios a los que se accede a través de su web. Mediante la presente Política de Privacidad (en adelante , la Política) LA tuTaller informa a los USUARIOS del sitio web: (VUESTROS DATOS)del tratamiento y usos a los que se someten los datos de carácter personal que se recaban en la web, con el fin de que decidan, libre y voluntariamente, si desean facilitar la información solicitada.
 
-                                                LA (VUESTRA EMPRESA) se reserva la facultad de modificar esta Política con el objeto de adaptarla a novedades legislativas, criterios jurisprudenciales, prácticas del sector, o intereses de la entidad. Cualquier modificación en la misma será anunciada con la debida antelación, a fin de que tengas perfecto conocimiento de su contenido.
+                                                tuTaller se reserva la facultad de modificar esta Política con el objeto de adaptarla a novedades legislativas, criterios jurisprudenciales, prácticas del sector, o intereses de la entidad. Cualquier modificación en la misma será anunciada con la debida antelación, a fin de que tengas perfecto conocimiento de su contenido.
                                                 
                                                 Ciertos servicios prestados en el portal pueden contener condiciones particulares con previsiones en materia de protección de Datos Personales. De ellos puedes informarte en los correspondientes apartados.
                                                 
                                                 TITULARIDAD DEL TRATAMIENTO
-                                                En dichos supuestos, los datos recabados por LA (VUESTRA EMPRESA) serán incorporados a ficheros titularidad de LA (VUESTRA EMPRESA) , debidamente inscritos en el Registro General de Protección de Datos.
+                                                En dichos supuestos, los datos recabados por tuTaller serán incorporados a ficheros titularidad de tuTaller , debidamente inscritos en el Registro General de Protección de Datos.
                                                 
                                                 USOS Y FINALIDADES
                                                 La finalidad de la recogida y tratamiento de los datos personales es la gestión, prestación y personalización de los servicios y contenidos del mismo que el USUARIO utilice y de la cual se informará en cada apartado.
@@ -136,15 +133,14 @@
                                                 Con el fin de que los datos obrantes en nuestras bases de datos siempre correspondan a tu situación real deberás mantenerlos actualizados, bien actualizándolos tú directamente en los caso en que ello sea posible bien comunicándolo al departamento correspondiente.
                                                 
                                                 UTILIZACIÓN DE COOKIES
-                                                Con el objeto de proteger la intimidad de los usuarios de su página web LA (VUESTRA EMPRESA) no emplea cookies cuando los mismos navegan por la misma.
+                                                Con el objeto de proteger la intimidad de los usuarios de su página web tuTaller no emplea cookies cuando los mismos navegan por la misma.
                                                 
                                                 SEGURIDAD DE LOS DATOS
-                                                LA (VUESTRA EMPRESA) ha adoptado en su sistema de información las medidas técnicas y organizativas legalmente requeridas, a fin de garantizar la seguridad y confidencialidad de los datos almacenados, evitando así, en la medida de lo posible, su alteración, pérdida, tratamiento o acceso no autorizado.
+                                                tuTaller ha adoptado en su sistema de información las medidas técnicas y organizativas legalmente requeridas, a fin de garantizar la seguridad y confidencialidad de los datos almacenados, evitando así, en la medida de lo posible, su alteración, pérdida, tratamiento o acceso no autorizado.
                                                 
                                                 DERECHOS DE LOS USUARIOS
                                                 En todo caso podrás acceder a tus datos, rectificarlos, cancelarlos y en su caso, oponerte a su tratamiento:
-                                                a) bien mediante solicitud acompañada de una fotocopia de tu D.N.I., remitida a la siguiente dirección postal: LA (VUESTRA EMPRESA) . X(VUESTROS DATOS)X, C.P. X (VUESTROS DATOS)X - X(VUESTROS DATOS)X
-                                                b) bien mandando un e-mail a la siguiente dirección de correo electrónico: X(VUESTROS DATOS)X
+                                                a) mandando un e-mail a la siguiente dirección de correo electrónico: main.tutaller@gmail.com
                                                 
                                                  
                                                 
